@@ -1,4 +1,4 @@
-# A Little Something for My Mochi ❤️ — Version 2
+# A Little Something for My Mochi ❤️ — Version 6
 
 ## What's new
 
