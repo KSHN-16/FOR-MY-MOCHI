@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Little Something for My Mochi ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cute Loading Screen -->
+  <div id="loader">
+    <div class="loader-card">
+      <div class="loader-dino" aria-hidden="true">
+        <div class="dino-body">🦕</div>
+      </div>
+      <h2>Getting some love ready...</h2>
+      <p>Just a little moment, My Mochi ♡</p>
+      <div class="loading-track">
+        <div id="loadingFill"></div>
+      </div>
+      <span id="loadingPercent">0%</span>
+    </div>
+  </div>
+
+  <div class="background-glow"></div>
+
+  <!-- Floating dinosaur friends -->
+  <div class="dino-decor" aria-hidden="true">
+    <span>🦕</span><span>🦖</span><span>🌿</span><span>♡</span><span>🦕</span>
+  </div>
+
+  <main id="app">
+
+    <!-- INTRO -->
+    <section class="screen active intro" data-screen="0">
+      <div class="content intro-content">
+        <div class="dino-corner">🦕</div>
+        <div class="tiny-heart">♥</div>
+        <p class="eyebrow">A LITTLE SOMETHING FOR</p>
+        <h1>My Mochi <span>♡</span></h1>
+        <p class="intro-text">
+          I know you're not feeling your best right now...
+          <br>so I made this little space just for you.
+        </p>
+        <button class="primary-btn next-btn">
+          <span>Open when you need a little love</span>
+          <span class="btn-heart">♥</span>
+        </button>
+        <p class="hint">Made with love, just because. ♡</p>
+      </div>
+    </section>
+
+    <!-- CHAPTER 1 -->
+    <section class="screen chapter" data-screen="1">
+      <div class="content">
+        <div class="chapter-number">01</div>
+        <div class="mini-dino">🦕</div>
+        <p class="eyebrow">FIRST OF ALL...</p>
+        <h2>A little reminder for you.</h2>
+        <div class="message-card">
+          <p>You don't have to be strong all the time.</p>
+          <p>It's okay to rest.</p>
+          <p>It's okay to take your time.</p>
+          <p>And it's okay to have days when you don't feel like yourself.</p>
+        </div>
+        <p class="soft-note">Right now, your only job is to feel better. ♡</p>
+        <button class="text-btn next-btn">Continue <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- CHAPTER 2 -->
+    <section class="screen chapter" data-screen="2">
+      <div class="content">
+        <div class="chapter-number">02</div>
+        <div class="mini-dino">🦖</div>
+        <p class="eyebrow">JUST IN CASE YOU FORGOT...</p>
+        <h2>Someone is thinking about you.</h2>
+
+        <button class="envelope" id="envelope" aria-label="Open the message">
+          <div class="envelope-back"></div>
+          <div class="letter-peek">♡</div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+        </button>
+        <p class="envelope-instruction">Flip open the envelope ♡</p>
+
+        <div class="hidden-message" id="hiddenMessage">
+          <p>There is someone out there thinking about you.</p>
+          <p>Missing you.</p>
+          <p>Wishing you were feeling better.</p>
+          <p>And wishing he could be right there beside you.</p>
+          <div class="signature">That someone is me. ♥</div>
+        </div>
+
+        <button class="text-btn next-btn locked">Continue <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- CHAPTER 3 -->
+    <section class="screen chapter" data-screen="3">
+      <div class="content">
+        <div class="chapter-number">03</div>
+        <div class="mini-dino">🦕</div>
+        <p class="eyebrow">WHEN YOU NEED ME...</p>
+        <h2>Tap this whenever you feel tired.</h2>
+
+        <div class="comfort-heart-area">
+          <button class="heart-push-button" id="comfortButton" aria-label="Push me">
+            <span>PUSH<br>ME</span>
+          </button>
+        </div>
+
+        <div class="comfort-message hidden-before-push" id="comfortMessage">
+          <p id="comfortText"></p>
+        </div>
+
+        <button class="text-btn next-btn locked" id="chapterThreeNext">One final thing <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section class="screen final-screen" data-screen="4">
+      <div class="content">
+        <div class="chapter-number">♡</div>
+        <div class="mini-dino">🦕💗</div>
+        <p class="eyebrow">ONE FINAL THING...</p>
+        <h2>I wrote you a letter.</h2>
+        <p class="intro-text">Take your time with this one, My Mochi.</p>
+
+        <button class="primary-btn" id="openLetter">
+          <span>Open my letter</span>
+          <span class="btn-heart">💌</span>
+        </button>
+
+        <article class="letter" id="letter">
+          <div class="letter-top">To My Mochi ♡</div>
+
+          <p>I know you're not feeling well right now, and honestly, I wish I could be there to make everything feel a little better for you.</p>
+          <p>I just want you to know that you don't always have to pretend to be okay. You don't have to be strong all the time either. Take your time, get some rest, and focus on feeling better.</p>
+          <p>And while you're doing that, remember one thing...</p>
+          <p class="emphasis">I'm always here.</p>
+          <p>Even if we're not together at that exact moment, you're always on my mind. I miss you, My Mochi, and I wish I could be beside you right now—to keep you company, make you smile, and remind you that everything is going to be okay.</p>
+          <p>So please stay strong for me, okay?</p>
+          <p>Better days are coming. Until then, take things one day at a time. Rest properly, don't push yourself too much, and let yourself recover.</p>
+          <p>And whenever you need a little reminder...</p>
+          <p>Come back here.</p>
+          <p>Because no matter what, <strong>you'll always have someone who cares about you and misses you.</strong></p>
+          <p class="emphasis">Me. ♥</p>
+
+          <div class="letter-signoff">
+            Your Mochi-missing person,<br>
+            <span>Sheen ♡</span>
+          </div>
+        </article>
+
+        <p class="end-note" id="endNote">Always with you. Always cheering for you. ♥</p>
+      </div>
+    </section>
+
+    <div class="progress" aria-hidden="true">
+      <span class="progress-dot active-dot"></span>
+      <span class="progress-dot"></span>
+      <span class="progress-dot"></span>
+      <span class="progress-dot"></span>
+      <span class="progress-dot"></span>
+    </div>
+  </main>
+
+  <audio id="bgMusic" loop preload="auto">
+    <!-- Optional: put a soft romantic MP3 in the project folder and change src below -->
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicButton" aria-label="Toggle background music" title="Toggle music">♫</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
